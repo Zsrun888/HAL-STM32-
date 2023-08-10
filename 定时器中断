@@ -1,0 +1,9 @@
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)  //  5号定时器中断
+{
+  if(htim == (&htim5))
+  {
+        if(lastEncoderValue==encoderValue)
+        encoderCount = 0;
+//    __HAL_TIM_SET_COUNTER(&htim1, 0);    //  编码器数据清零
+  }
+}
